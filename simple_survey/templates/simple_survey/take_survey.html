@@ -1,0 +1,14 @@
+<form method="POST">
+    {{ formset.management_form }}
+    <h1>{{ survey.name }}</h1>
+
+    {% for form in formset.forms %}
+    <p>
+    {{ form.answer.label }}<br />
+    {{ form.answer }}<br />
+    {{ form.answer.errors }}
+    <div style="display: none;">{{ form.question }}</div>
+    </p>
+    {% endfor %}
+    <input type="submit" />
+</form>

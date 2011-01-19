@@ -1,0 +1,5 @@
+{% for survey in surveys %}
+<p>
+    <a href="{% url simple_survey.views.take_survey survey.id %}">{{ survey.name }}</a>
+</p>
+{% endfor %}
